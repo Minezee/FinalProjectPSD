@@ -11,9 +11,9 @@ data = {'Transaction': [1, 1, 2, 2, 3, 3, 3],
 df = pd.read_csv('bread basket.csv')
 
 st.sidebar.header('Apriori Algorithm Parameters')
-min_support = st.sidebar.slider('Min Support', 0.01, 1.0, 0.1)
-min_confidence = st.sidebar.slider('Min Confidence', 0.01, 1.0, 0.5)
-lift_threshold = st.sidebar.slider('Min Lift', 0.0, 2.0, 1.0, step=0.01)
+min_support = st.sidebar.slider('Min Support', 0.01, 1.0, 0.01)
+min_confidence = st.sidebar.slider('Min Confidence', 0.01, 1.0, 0.01)
+lift_threshold = st.sidebar.slider('Min Lift', 0.0, 2.0, 0.01, step=0.01)
 
 
 transactions = [group['Item'].tolist() for _, group in df.groupby(['Transaction'])]
